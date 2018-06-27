@@ -25,7 +25,8 @@
       {{item.fileType}}
     </td>
     <td>
-        <button (click)="onGoToPage2(item)">View</button>
+        <!-- <button (click)="onGoToPage2(item)">View</button> -->
+        <a target="_blank" href="{{prepareDynamicUrl(item)}}">view file</a>
     </td>
   </tr>
 </table>

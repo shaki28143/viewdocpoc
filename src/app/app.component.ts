@@ -31,10 +31,11 @@ export class AppComponent {
   fileURL = '';
   url = '';
 
-  onGoToPage2(item) {
-    this.fileURL = 'http://7bede31a.ngrok.io/assets/' + item.fileName + item.fileType;
-    this.domain = '7bede31a.ngrok.io';
+  prepareDynamicUrl(item) {
+    this.domain = 'e6414f2d.ngrok.io';
+    this.fileURL = 'http://'+ this.domain +'/assets/' + item.fileName + item.fileType;
     this.url = 'https://docs.google.com/a/'+ this.domain +'/viewer?url=' + this.fileURL;
     console.log(this.url);
+    return this.url;
   }
 }
