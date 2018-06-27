@@ -32,7 +32,8 @@ export class AppComponent {
   url = '';
 
   onGoToPage2(item) {
-    this.fileURL = 'http://127.0.0.1:4201/assets/' + item.fileName + item.fileType;
+    this.fileURL = 'http://7bede31a.ngrok.io/assets/' + item.fileName + item.fileType;
+    this.domain = '7bede31a.ngrok.io';
     this.url = 'https://docs.google.com/a/'+ this.domain +'/viewer?url=' + this.fileURL;
     console.log(this.url);
   }
